@@ -366,3 +366,268 @@ footer {
     border-top-right-radius: 20px;
 }
 
+section {
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.elementor-button {
+    background: linear-gradient(135deg, var(--verde), #00aa6c);
+    box-shadow: 0 12px 24px rgba(0, 129, 72, 0.2);
+}
+
+.elementor-button:hover {
+    background: linear-gradient(135deg, var(--vermelho), #e14035);
+    box-shadow: 0 12px 24px rgba(192, 29, 24, 0.3);
+}
+
+.card {
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--vermelho), var(--verde));
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+section h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: var(--verde);
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.intro h1::before {
+    content: "🎄 ";
+}
+
+footer::before {
+    content: "✨";
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -2em;
+    color: white;
+    font-size: 1.5em;
+    user-select: none;
+    animation-name: fall;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+    font-size: 2em;
+}
+
+.snowflake:nth-child(3) {
+    left: 35%;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(4) {
+    left: 50%;
+    animation-delay: 1s;
+    font-size: 1.2em;
+}
+
+.snowflake:nth-child(5) {
+    left: 65%;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(6) {
+    left: 80%;
+    animation-delay: 5s;
+    font-size: 1.8em;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.elementor-button:hover {
+    background-color: var(--vermelho);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px var(--vermelho);
+    color: white;
+}
+
+.mensagem-destaque {
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: destaqueFadeIn 1.2s ease;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.mensagem-destaque h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #fffbe6;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mensagem-destaque p {
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes destaqueFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.somos-bytehug {
+    background-color: var(--branco);
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+    color: var(--preto);
+}
+
+.somos-bytehug h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaçamento para dar mais destaque */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra para dar destaque ao título */
+}
+
+.somos-bytehug p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin: 1 auto;
+}
+
+.somos-bytehug .btn {
+    background-color: var(--verde);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.somos-bytehug .btn:hover {
+    background-color: #006636;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.adote-carta {
+    background-color: var(--vermelho); /* Retângulo vermelho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    margin: 4rem auto; /* Centraliza a seção */
+    color: white;
+    border-radius: 10px;
+    max-width: 1200px; /* Limita a largura máxima */
+}
+
+.adote-carta .texto {
+    font-size: 1.5rem;
+    font-weight: 600;
+    max-width: 60%; /* Para garantir que o texto fique proporcional */
+}
+
+.adote-carta .btn {
+    background-color: white;
+    color: var(--vermelho);
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.adote-carta .btn:hover {
+    background-color: var(--vermelho);
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
