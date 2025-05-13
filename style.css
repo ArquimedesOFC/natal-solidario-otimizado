@@ -1,0 +1,368 @@
+/* === VARIÁVEIS E BASE === */
+:root {
+    --vermelho: #C01D18;
+    --verde: #008148;
+    --branco: #ffffff;
+    --cinza: #f7f7f7;
+    --preto: #1e1e1e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--cinza);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+/* === CABEÇALHO === */
+header {
+    background: var(--vermelho);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.menu-link {
+    position: relative;
+    color: var(--vermelho);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: var(--vermelho);
+    color: white;
+}
+
+/* === HERO === */
+.hero {
+    background: url('imagens/ARTE-NATAL-SOLIDARIO-FUNDO-SITE.png') no-repeat center center/cover;
+    text-align: center;
+    color: white;
+    padding: 5rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.elementor-button {
+    background: var(--verde);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.4s ease;
+    display: inline-block;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.elementor-button::after {
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.6s ease;
+    transform: translateX(-50%);
+}
+
+.elementor-button:hover {
+    animation: cloudFloat 2s ease-in-out infinite;
+    background-color: var(--vermelho);
+}
+
+.elementor-button:hover::after {
+    width: 50%;
+}
+
+@keyframes cloudFloat {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* === SEÇÕES === */
+section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: var(--vermelho);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+section p,
+section h5 {
+    margin-bottom: 1rem;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+/* === PASSOS === */
+.passos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.passo {
+    flex: 1 1 200px;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.passo img {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+/* === MAPA === */
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* === RODAPÉ === */
+footer {
+    background: var(--preto);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: inherit;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: var(--verde);
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .passos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: #C01D18;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+.btn-voltar {
+    display: block;
+    width: fit-content;
+    margin: 2rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: #008148;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #006636;
+}
+
+body {
+    background: linear-gradient(180deg, #fffdf7 0%, #f8f8f8 100%);
+}
+
+/* === LOGO === */
+.logo {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* === TÍTULOS E INTRODUÇÃO === */
+.intro {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.intro h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: var(--vermelho);
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #555;
+    font-weight: 400;
+}
+
+/* === CARDs === */
+.card {
+    position: relative;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 80px;
+    height: 80px;
+    background: var(--vermelho);
+    transform: rotate(45deg);
+    z-index: 0;
+    opacity: 0.1;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* === BOTÃO VOLTAR === */
+.btn-voltar {
+    margin-top: 3rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* === RODAPÉ === */
+footer {
+    background: var(--vermelho);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 4rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
