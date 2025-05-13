@@ -631,3 +631,62 @@ footer::before {
     color: white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+#local-entrega .mapa {
+    background-color: var(--verde); /* Fundo verde */
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+#local-entrega iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+#datas-importantes {
+    background-color: #f8f9fa; /* Fundo suave */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+}
+
+#datas-importantes h3 {
+    font-size: 2rem;
+    color: #e63946; /* Cor vermelha (temática natalina) */
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#datas-importantes .data-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e63946;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#datas-importantes .data-item h4 {
+    font-size: 1.25rem;
+    color: #2d2d2d;
+}
+
+#datas-importantes .data-item p {
+    font-size: 1.1rem;
+    color: #2d2d2d;
+}
+
+#datas-importantes .data-item .icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 1rem;
+}
+
+/* Adicionando ícones temáticos */
+#datas-importantes .data-item.inicio-campanha {
+    border-left: 5px solid #2a9d8f; /* Cor para início de campanha */
+}
