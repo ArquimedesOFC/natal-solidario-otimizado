@@ -28,6 +28,16 @@ body {
     color: var(--verde);
 }
 
+/* Para o arquivo cartas.html */
+body.cartas {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #ffffff; /* Fundo branco apenas no cartas.html */
+    color: var(--verde);
+}
+
+
 
 /* === CABEÇALHO === */
 header {
@@ -897,4 +907,41 @@ footer::before {
 }
 
 
+/* Responsividade - Ajustes para telas menores */
+@media (max-width: 768px) {
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .intro p.subtitulo {
+        font-size: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 10px;
+    }
+
+    .btn-voltar {
+        padding: 8px 12px;
+    }
+}
 
