@@ -111,13 +111,7 @@ nav ul {
     transform: translateX(-50%);
 }
 
-.elementor-button:hover {
-    margin: 1px;
-    animation: cloudFloat 2s ease-in-out infinite;
-    background-color: var(--vermelho);
-      transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-}
+
 
 .elementor-button:hover::after {
     width: 50%;
@@ -373,15 +367,8 @@ section {
     }
 }
 
-.elementor-button {
-    background: linear-gradient(135deg, var(--verde), #00aa6c);
-    box-shadow: 0 12px 24px rgba(0, 129, 72, 0.2);
-}
 
-.elementor-button:hover {
-    background: linear-gradient(135deg, var(--vermelho), #e14035);
-    box-shadow: 0 12px 24px rgba(192, 29, 24, 0.3);
-}
+
 
 .card {
     padding: 10px;
@@ -516,11 +503,7 @@ footer::before {
     }
 }
 
-.elementor-button:hover {
-    background-color: var(--vermelho);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 30px var(--vermelho);
-    color: white;
-}
+
 
 .mensagem-destaque {
     max-width: 700px;
@@ -885,8 +868,7 @@ footer::before {
 }
 
 .menu-link:hover,
-.btn:hover,
-.elementor-button:hover {
+.btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
