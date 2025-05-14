@@ -1,8 +1,11 @@
 /* === VARIÁVEIS E BASE === */
 :root {
-    --vermelho: #c62828; /* Vermelho mais suave */
-    --verde: #1b5e20;   /* Verde mais escuro e elegante */
-    --dourado: #f9a825; /* Um dourado mais vivo */
+    --vermelho: #c62828;
+    /* Vermelho mais suave */
+    --verde: #1b5e20;
+    /* Verde mais escuro e elegante */
+    --dourado: #f9a825;
+    /* Um dourado mais vivo */
     --branco: #ffffff;
 }
 
@@ -28,11 +31,15 @@ body {
 
 /* === CABEÇALHO === */
 header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: var(--vermelho);
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header img {
@@ -102,8 +109,11 @@ nav ul {
 }
 
 .elementor-button:hover {
+    margin: 1px;
     animation: cloudFloat 2s ease-in-out infinite;
     background-color: var(--vermelho);
+      transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
 }
 
 .elementor-button:hover::after {
@@ -341,7 +351,7 @@ footer {
     margin-top: 0px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-        background-size: 300% 300%;
+    background-size: 300% 300%;
     animation: shineFooter 8s ease infinite;
 }
 
@@ -378,7 +388,7 @@ section {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -640,7 +650,7 @@ footer::before {
 }
 
 #local-entrega .mapa .maptext {
-    color: #2d2d2d;
+    color: #ffffff;
     text-align: center;
     padding: 1%;
 }
@@ -662,7 +672,7 @@ footer::before {
 #datas-importantes {
     background: #fffefe;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 10 40px 120px rgba(0, 0, 0, 0.05);
     padding: 2rem;
 }
 
@@ -770,7 +780,7 @@ footer::before {
     background-color: #ffffff;
     padding: 80px 20px;
     text-align: center;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 
 }
 
@@ -828,16 +838,26 @@ footer::before {
 
 
 .background-vermelho {
-    
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+
     background: var(--vermelho);
-  padding: 20px; /* Espaçamento interno */
-  
+    padding: 20px;
+    /* Espaçamento interno */
+
 }
-.card, .btn, .elementor-button, .menu-link {
+
+.card,
+.btn,
+.elementor-button,
+.menu-link {
     transition: all 0.3s ease-in-out;
 }
 
-.elementor-button, .btn {
+.elementor-button,
+.btn {
     background: linear-gradient(135deg, var(--verde), #43a047);
     color: white;
     border: none;
@@ -847,17 +867,31 @@ footer::before {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.elementor-button:hover, .btn:hover {
+.elementor-button:hover,
+.btn:hover {
     background: linear-gradient(135deg, var(--vermelho), #e53935);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-3px);
 }
-.fundo{
+
+.fundo {
     background-color: var(--branco);
 }
 
-.menu-link:hover, .btn:hover, .elementor-button:hover {
+.menu-link:hover,
+.btn:hover,
+.elementor-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
+.sobre, #acolhidos {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #333;
+  padding: 2%;
+  color: var(--verde);
+      margin-top: 3rem;
+      margin-bottom: 3rem;
 
+}
