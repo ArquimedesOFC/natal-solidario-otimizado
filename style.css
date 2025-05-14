@@ -143,13 +143,6 @@ section h5 {
     margin-bottom: 1rem;
 }
 
-.card {
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-}
 
 /* === PASSOS === */
 .passos {
@@ -229,20 +222,20 @@ footer a:hover {
 }
 
 .card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    transition: transform 0.3s;
+    background: #fffdf7 url('imagens/textura-papel.jpg') no-repeat center;
+    border: 2px dashed #D4AF37;
+    border-radius: 16px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
+
 
 .card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 80px;
     margin-bottom: 1rem;
 }
 
@@ -281,6 +274,7 @@ body {
     height: 60px;
     transition: transform 0.3s ease;
 }
+
 .logo:hover {
     transform: scale(1.05);
 }
@@ -305,15 +299,6 @@ body {
 }
 
 /* === CARDs === */
-.card {
-    position: relative;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 20px;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-}
 
 .card::before {
     content: '';
@@ -329,9 +314,11 @@ body {
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(90, 90, 90, 0.2);
+  transition: all 0.9s ease;
 }
+
 
 .card img {
     border-radius: 10px;
@@ -376,6 +363,7 @@ section {
         transform: translateY(30px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -405,9 +393,9 @@ section {
     border-radius: 20px;
     padding: 2px;
     background: linear-gradient(135deg, var(--vermelho), var(--verde));
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     z-index: 0;
@@ -447,24 +435,33 @@ footer::before {
     position: fixed;
     top: 0;
     left: 0;
-    pointer-events: none;
     width: 100%;
     height: 100%;
+    pointer-events: none;
     z-index: 9999;
-    overflow: hidden;
 }
 
 .snowflake {
+    color: #fff;
+    font-size: 1.5rem;
     position: absolute;
-    top: -2em;
-    color: white;
-    font-size: 1.5em;
-    user-select: none;
-    animation-name: fall;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+    top: -10%;
+    animation: snow 10s linear infinite;
+    opacity: 0.8;
 }
+
+@keyframes snow {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
 
 .snowflake:nth-child(1) {
     left: 10%;
@@ -504,6 +501,7 @@ footer::before {
         transform: translateY(0) rotate(0deg);
         opacity: 1;
     }
+
     100% {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0;
@@ -550,30 +548,27 @@ footer::before {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 .somos-bytehug {
-    background-color: var(--branco);
-    padding: 4rem 2rem;
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     margin-top: 3rem;
-    color: var(--preto);
 }
 
 .somos-bytehug h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1e1e1e;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px; /* Espaçamento para dar mais destaque */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sutil sombra para dar destaque ao título */
+    color: var(--verde);
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
+
 
 .somos-bytehug p {
     font-size: 1.1rem;
@@ -594,26 +589,43 @@ footer::before {
     text-decoration: none;
 }
 
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--vermelho);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
 .somos-bytehug .btn:hover {
     background-color: #006636;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
 .adote-carta {
-    background-color: var(--vermelho); /* Retângulo vermelho */
+    background-color: var(--vermelho);
+    /* Retângulo vermelho */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 3rem;
-    margin: 4rem auto; /* Centraliza a seção */
+    margin: 4rem auto;
+    /* Centraliza a seção */
     color: white;
     border-radius: 10px;
-    max-width: 1200px; /* Limita a largura máxima */
+    max-width: 1200px;
+    /* Limita a largura máxima */
 }
 
 .adote-carta .texto {
     font-size: 1.5rem;
     font-weight: 600;
-    max-width: 60%; /* Para garantir que o texto fique proporcional */
+    max-width: 60%;
+    /* Para garantir que o texto fique proporcional */
 }
 
 .adote-carta .btn {
@@ -631,8 +643,10 @@ footer::before {
     color: white;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
 #local-entrega .mapa {
-    background-color: var(--verde); /* Fundo verde */
+    background-color: var(--verde);
+    /* Fundo verde */
     padding: 2rem;
     border-radius: 10px;
     margin-top: 2rem;
@@ -643,31 +657,31 @@ footer::before {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
 }
+
 #datas-importantes {
-    background-color: #f8f9fa; /* Fundo suave */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 3rem;
 }
 
 #datas-importantes h3 {
     font-size: 2rem;
-    color: #e63946; /* Cor vermelha (temática natalina) */
+    color: #e63946;
+    /* Cor vermelha (temática natalina) */
     text-align: center;
     margin-bottom: 1.5rem;
 }
 
 #datas-importantes .data-item {
-    background-color: #fff;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    border-radius: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border: 2px solid #e63946;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #fefefe;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 #datas-importantes .data-item h4 {
@@ -681,12 +695,35 @@ footer::before {
 }
 
 #datas-importantes .data-item .icon {
-    width: 30px;
-    height: 30px;
-    margin-left: 1rem;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* Adicionando ícones temáticos */
 #datas-importantes .data-item.inicio-campanha {
-    border-left: 5px solid #2a9d8f; /* Cor para início de campanha */
+    border-left: 5px solid #2a9d8f;
+    /* Cor para início de campanha */
+}
+
+#natal-sonhos {
+    background-color: #f1faee;
+    /* Fundo suave de Natal */
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    margin-top: 3rem;
+}
+
+#natal-sonhos h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #e63946;
+    /* Vermelho natalino */
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    /* Efeito de sombra suave no título */
 }
