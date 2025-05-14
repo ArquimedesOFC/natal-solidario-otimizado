@@ -84,6 +84,7 @@ nav ul {
 }
 
 .elementor-button {
+    
     background: var(--verde);
     color: white;
     padding: 0.75rem 1.5rem;
@@ -95,6 +96,8 @@ nav ul {
     display: inline-block;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+
 
 .elementor-button::after {
     content: "";
@@ -838,16 +841,15 @@ footer::before {
 
 
 .background-vermelho {
-
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
-
-    background: var(--vermelho);
-    padding: 20px;
-    /* Espaçamento interno */
-
+  background: var(--vermelho);
+  max-height: 180px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
 }
+
 
 .card,
 .btn,
@@ -895,3 +897,5 @@ footer::before {
       margin-bottom: 3rem;
 
 }
+
+
