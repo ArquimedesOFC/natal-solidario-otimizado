@@ -672,8 +672,8 @@ footer::before {
     border-radius: 12px;
     box-shadow: 10 40px 120px rgba(0, 0, 0, 0.05);
 
-    padding: 3rem 2rem;
-    margin-top: 3rem;
+    padding: 3rem ;
+    margin-top: 6rem;
 }
 
 #datas-importantes h3 {
@@ -874,7 +874,7 @@ footer::before {
 .fundo {
     background-color: var(--branco);
     margin-top: 0px;
-    padding: 1px;
+    padding: 3rem;
     
 }
 
