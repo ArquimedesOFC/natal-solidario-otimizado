@@ -1,11 +1,11 @@
 /* === VARIÁVEIS E BASE === */
 :root {
-    --vermelho: #C01D18;
-    --verde: #008148;
+    --vermelho: #c62828; /* Vermelho mais suave */
+    --verde: #1b5e20;   /* Verde mais escuro e elegante */
+    --dourado: #f9a825; /* Um dourado mais vivo */
     --branco: #ffffff;
-    --cinza: #f7f7f7;
-    --preto: #1e1e1e;
 }
+
 
 * {
     margin: 0;
@@ -15,10 +15,16 @@
 }
 
 body {
-    background-color: var(--cinza);
-    color: var(--preto);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     line-height: 1.6;
+    background-image: url('imagens/ARTE-NATAL-SOLIDARIO-FUNDO-SITE.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: var(--verde);
 }
+
 
 /* === CABEÇALHO === */
 header {
@@ -40,12 +46,12 @@ nav ul {
 }
 
 .menu-link {
+    background: var(--branco);
     position: relative;
     color: var(--vermelho);
     font-weight: 600;
     text-decoration: none;
     padding: 10px 20px;
-    background-color: white;
     border-radius: 30px;
     font-size: 16px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -58,12 +64,6 @@ nav ul {
 }
 
 /* === HERO === */
-.hero {
-    background: url('imagens/ARTE-NATAL-SOLIDARIO-FUNDO-SITE.png') no-repeat center center/cover;
-    text-align: center;
-    color: white;
-    padding: 5rem 2rem;
-}
 
 .hero h1 {
     font-size: 3rem;
@@ -176,13 +176,7 @@ section h5 {
 }
 
 /* === RODAPÉ === */
-footer {
-    background: var(--preto);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
+
 
 footer a {
     color: inherit;
@@ -196,21 +190,20 @@ footer a:hover {
 
 /* === RESPONSIVIDADE === */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
+    .nav-bar ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .passos {
-        flex-direction: column;
-        align-items: center;
+    .banner h1,
+    .banner p {
+        position: relative;
+        z-index: 2;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
-    }
+
 }
+
 
 .grid {
     display: grid;
@@ -222,7 +215,7 @@ footer a:hover {
 }
 
 .card {
-    background: #fffdf7 url('imagens/textura-papel.jpg') no-repeat center;
+    background: #fffdf7 url('imagens/textura-papel.jp') no-repeat center;
     border: 2px dashed #D4AF37;
     border-radius: 16px;
     background-color: white;
@@ -265,9 +258,6 @@ footer a:hover {
     background-color: #006636;
 }
 
-body {
-    background: linear-gradient(180deg, #fffdf7 0%, #f8f8f8 100%);
-}
 
 /* === LOGO === */
 .logo {
@@ -314,9 +304,9 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(90, 90, 90, 0.2);
-  transition: all 0.9s ease;
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(90, 90, 90, 0.2);
+    transition: all 0.9s ease;
 }
 
 
@@ -348,9 +338,11 @@ footer {
     padding: 2rem;
     text-align: center;
     font-size: 0.95rem;
-    margin-top: 4rem;
+    margin-top: 0px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+        background-size: 300% 300%;
+    animation: shineFooter 8s ease infinite;
 }
 
 section {
@@ -381,10 +373,14 @@ section {
 }
 
 .card {
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    position: relative;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
+
 
 .card::after {
     content: "";
@@ -425,7 +421,6 @@ section h2::after {
 }
 
 footer::before {
-    content: "✨";
     display: block;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -644,6 +639,12 @@ footer::before {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
+#local-entrega .mapa .maptext {
+    color: #2d2d2d;
+    text-align: center;
+    padding: 1%;
+}
+
 #local-entrega .mapa {
     background-color: var(--verde);
     /* Fundo verde */
@@ -659,7 +660,7 @@ footer::before {
 }
 
 #datas-importantes {
-    background: #fff;
+    background: #fffefe;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     padding: 2rem;
@@ -727,3 +728,136 @@ footer::before {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     /* Efeito de sombra suave no título */
 }
+
+.nav-bar ul li a:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.submensagem {
+    font-size: 1.25rem;
+    color: #5c3b3b;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.botao-adocao {
+    background-color: #8B0000;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+}
+
+.botao-adocao:hover {
+    background-color: #6a0000;
+}
+
+.datas-importantes {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+
+}
+
+.titulo-datas {
+    font-size: 2.5rem;
+    color: #8B0000;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.cartoes-datas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cartao-data {
+    background: #fff;
+    border: 2px solid #e9d9cb;
+    border-radius: 20px;
+    padding: 30px 20px;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.cartao-data:hover {
+    transform: translateY(-5px);
+}
+
+.icone-data {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.cartao-data h3 {
+    font-size: 1.25rem;
+    color: #006400;
+    /* verde natal */
+    margin-bottom: 10px;
+}
+
+.cartao-data p {
+    font-size: 1.1rem;
+    color: #3b1f1f;
+}
+
+.background-bege {
+    background-color: #ffffff;
+    /* Cor bege */
+
+}
+
+
+.background-vermelho {
+    
+    background: var(--vermelho);
+  padding: 20px; /* Espaçamento interno */
+  
+}
+.card, .btn, .elementor-button, .menu-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.elementor-button, .btn {
+    background: linear-gradient(135deg, var(--verde), #43a047);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.elementor-button:hover, .btn:hover {
+    background: linear-gradient(135deg, var(--vermelho), #e53935);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+.fundo{
+    background-color: var(--branco);
+}
+
+.menu-link:hover, .btn:hover, .elementor-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
