@@ -1,13 +1,13 @@
 /* === VARIÁVEIS E BASE === */
 :root {
     --vermelho: #c62828;
-    /* Vermelho mais suave */
     --verde: #1b5e20;
-    /* Verde mais escuro e elegante */
     --dourado: #f9a825;
-    /* Um dourado mais vivo */
     --branco: #ffffff;
+    --sombra-suave: 0 4px 10px rgba(0, 0, 0, 0.1);
+    --sombra-intensa: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 
 
 * {
@@ -214,6 +214,16 @@ footer a:hover {
         z-index: 2;
     }
 
+        .adote-carta {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .adote-carta .texto {
+        max-width: 100%;
+    }
+
 
 }
 
@@ -227,24 +237,15 @@ footer a:hover {
     margin: auto;
 }
 
-.card {
-    background: #fffdf7 url('imagens/textura-papel.jp') no-repeat center;
-    border: 2px dashed #D4AF37;
-    border-radius: 16px;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5rem;
-}
+
 
 
 
 .card img {
     width: 100%;
-    border-radius: 80px;
+    border-radius: 10px;
     margin-bottom: 1rem;
 }
-
 .card h3 {
     color: #C01D18;
     margin-bottom: 0.5rem;
@@ -319,13 +320,10 @@ footer a:hover {
 .card:hover {
     transform: scale(1.03);
     box-shadow: 0 8px 16px rgba(90, 90, 90, 0.2);
-    transition: all 0.9s ease;
 }
 
 
-.card img {
-    border-radius: 10px;
-}
+
 
 .card h3 {
     font-size: 1.25rem;
@@ -386,14 +384,16 @@ section {
 }
 
 .card {
+    padding: 10px;
+    position: relative; /* Adicione isso para o ::before e ::after funcionarem corretamente */
     background: rgba(255, 255, 255, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
 }
-
 
 .card::after {
     content: "";
@@ -450,7 +450,7 @@ footer::before {
 }
 
 .snowflake {
-    color: #fff;
+    color: #00ffb3;
     font-size: 1.5rem;
     position: absolute;
     top: -10%;
@@ -673,10 +673,13 @@ footer::before {
 }
 
 #datas-importantes {
+    
     background: #fffefe;
     border-radius: 12px;
     box-shadow: 10 40px 120px rgba(0, 0, 0, 0.05);
-    padding: 2rem;
+
+    padding: 3rem 2rem;
+    margin-top: 3rem;
 }
 
 #datas-importantes h3 {
@@ -834,6 +837,7 @@ footer::before {
 }
 
 .background-bege {
+    
     background-color: #ffffff;
     /* Cor bege */
 
@@ -851,14 +855,11 @@ footer::before {
 }
 
 
-.card,
 .btn,
-.elementor-button,
 .menu-link {
     transition: all 0.3s ease-in-out;
 }
 
-.elementor-button,
 .btn {
     background: linear-gradient(135deg, var(--verde), #43a047);
     color: white;
@@ -878,6 +879,9 @@ footer::before {
 
 .fundo {
     background-color: var(--branco);
+    margin-top: 0px;
+    padding: 0px;
+    
 }
 
 .menu-link:hover,
@@ -897,5 +901,18 @@ footer::before {
       margin-bottom: 3rem;
 
 }
+.intro h1 {
+    animation: shineTitle 3s infinite alternate;
+}
+
+@keyframes shineTitle {
+    from {
+        text-shadow: 0 0 5px var(--dourado), 0 0 10px var(--dourado);
+    }
+    to {
+        text-shadow: 0 0 15px var(--dourado), 0 0 30px var(--dourado);
+    }
+}
+
 
 
